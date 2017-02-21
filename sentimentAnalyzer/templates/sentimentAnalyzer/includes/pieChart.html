@@ -1,0 +1,44 @@
+{% block content %}
+
+    <canvas id="myChart" ></canvas>
+    <script>
+        $(function () {
+            var data = [
+                {
+                    value: 0,
+                    color: "#00b5fd",
+                    highlight: "#36d7ff",
+                    label: "NEUTRAL"
+                },
+                {
+                    value: 0,
+                    color: "#06bf53",
+                    highlight: "#41d3a1",
+                    label: "POSITIVE"
+                },
+                {
+                    value: 0,
+                    color: "#F7464A",
+                    highlight: "#FF5A5E",
+                    label: "NEGATIVE"
+                }
+            ]
+
+            var i = 0;
+            {% for value in pie_list %}
+                data[i].value = {{ value }}
+                    i = i + 1;
+            {% endfor %}
+
+            var option = {
+                responsive: true,
+            };
+
+            // Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myChart").getContext('2d');
+            var myDoughnutChart = new Chart(ctx).Doughnut(data, option);
+
+        });
+    </script>
+
+{% endblock %}

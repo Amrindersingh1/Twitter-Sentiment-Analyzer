@@ -1,0 +1,37 @@
+{% block content %}
+
+<ul class="share-buttons" xmlns:mailto="http://www.w3.org/1999/xhtml" xmlns:http="http://www.w3.org/1999/xhtml"
+    xmlns:https="http://www.w3.org/1999/xhtml">
+  <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.sdfvgfds.com&t=asdf" title="Share on Facebook" target="_blank">
+          {% load static %}
+          <img alt="Share on Facebook" src="{% static "images/simple_icons/Facebook.png" %}">
+      </a>
+  </li>
+  <li>
+      <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fwww.sdfvgfds.com&text=asdf:%20http%3A%2F%2Fwww.sdfvgfds.com" target="_blank" title="Tweet">
+          {% load static %}
+          <img alt="Tweet" src="{% static "images/simple_icons/Twitter.png" %}">
+      </a>
+  </li>
+  <li>
+      <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.sdfvgfds.com" target="_blank" title="Share on Google+">
+          {% load static %}
+          <img alt="Share on Google+" src="{% static "images/simple_icons/Google+.png" %}">
+      </a>
+  </li>
+  <li>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.sdfvgfds.com&title=asdf&summary=wdfghjofds%20hfd%20kvnkjdbv%20dnvidshvishdnv%20dihvk%20nbdskvndso%20s%20vodsjo&source=http%3A%2F%2Fwww.sdfvgfds.com" target="_blank" title="Share on LinkedIn">
+          {% load static %}
+          <img alt="Share on LinkedIn" src="{% static "images/simple_icons/LinkedIn.png" %}">
+      </a>
+  </li>
+  <li>
+      <a title="Send email">
+         {% load static %}
+          <img alt="Send email" src="{% static "images/simple_icons/Email.png" %}">
+      </a>
+  </li>
+</ul>
+
+{% endblock %}

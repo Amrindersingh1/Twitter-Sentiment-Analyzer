@@ -1,0 +1,120 @@
+{% extends 'sentimentAnalyzer/header.html' %}
+
+{% block content %}
+
+
+    <div class="container paddingTop100">
+
+        <div class="row" id="inforow">
+
+            <div class="col-sm-6">
+                <div class="card infoCard">
+                    <!--Card content-->
+                    <div class="card-block">
+                        <h2 class="card-title">SEARCH TAG: {{ tag }}</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card infoCard">
+                    <!--Card content-->
+                    <div class="card-block">
+                        <h2 class="card-title">TWEETS ANALYZED: {{ count }}</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" id="chartrow">
+
+            <div class="col-sm-7">
+                {% include "sentimentAnalyzer/includes/lineChart.html" %}
+            </div>
+
+            <div class="col-sm-5 marginedTop">
+                {% include "sentimentAnalyzer/includes/pieChart.html" %}
+            </div>
+
+        </div>
+
+        <ul class="nav nav-tabs tabs-3 height50" role="tablist">
+            <li class="nav-item height50 width33" style="background: #06bf53">
+                <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">POSITIVE Tweets</a>
+            </li>
+            <li class="nav-item height50 width33" style="background: #00b5fd">
+                <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">NEUTRAL Tweets</a>
+            </li>
+            <li class="nav-item height50 width33" style="background: #F7464A">
+                <a class="nav-link" data-toggle="tab" href="#panel3" role="tab">NEGATIVE Tweets</a>
+            </li>
+        </ul>
+        <!-- Tab panels -->
+        <div class="tab-content">
+            <!--/.Panel 1-->
+            <div class="tab-pane fade" id="panel1" role="tabpanel">
+                <br>
+                {% for item in tweet_list %}
+                    {% if item.polarity > 0 %}
+                        <div class="card tabCard tcardp">
+                            <!--Card content-->
+                            <div class="card-block">
+                                <h4 class="card-title">@{{ item.user }}:</h4>
+                                <hr>
+                                <h5 class="card-text">{{ item.tweet }}</h5>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!--Panel 2-->
+            <div class="tab-pane fade" id="panel2" role="tabpanel">
+                <br>
+                {% for item in tweet_list %}
+                    {% if item.polarity == 0 %}
+                        <div class="card tabCard tcardn">
+                            <!--Card content-->
+                            <div class="card-block">
+                                <h4 class="card-title">@{{ item.user }}:</h4>
+                                <hr>
+                                <h5 class="card-text">{{ item.tweet }}</h5>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!--/.Panel 2-->
+            <!--Panel 3-->
+            <div class="tab-pane fade" id="panel3" role="tabpanel">
+                <br>
+                {% for item in tweet_list %}
+                    {% if item.polarity < 0 %}
+                        <div class="card tabCard tcardnt">
+                            <!--Card content-->
+                            <div class="card-block">
+                                <h4 class="card-title">@{{ item.user }}:</h4>
+                                <hr>
+                                <h5 class="card-text">{{ item.tweet }}</h5>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <!--/.Panel 3-->
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Nav tabs -->
+
+
+
+    <script>
+        $('.navbar').removeClass('beinghidden')
+    </script>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% block content %}
+
+    <canvas id="myChart2" ></canvas>
+    <script>
+        $(function () {
+            var data = {
+                labels: [0,1,2,3,4,5,6,7,8,9],
+                datasets: [
+                    {
+                        label: "POSITIVE TWEETS",
+                        fillColor: "rgba(54,183,143,0.2)",
+                        strokeColor: "#1db765",
+                        pointColor: "#09d37b",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: []
+                    },
+                    {
+                        label: "NEGATIVE TWEETS",
+                        fillColor: "rgba(247,99,95,0.5)",
+                        strokeColor: "#f7635f",
+                        pointColor: "#F7464A",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: []
+                    },
+                    {
+                        label: "NEUTRAL TWEETS",
+                        fillColor: "rgba(29,179,253,0.2)",
+                        strokeColor: "#1db3fd",
+                        pointColor: "#00b5fd",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: []
+                    }
+
+                ]
+            }
+
+            var i = 0;
+            var pos = [], neg = [], net = [];
+            {% for item in tweet_list %}
+                {% if item.polarity > 0 %}
+                    pos.push({{ item.polarity }});
+                {% elif item.polarity < 0 %}
+                    neg.push({{ item.polarity }});
+                {% else %}
+                    net.push({{ item.polarity }});
+                {% endif %}
+            {% endfor %}
+
+            data.datasets[0].data = pos.slice(0);
+            data.datasets[1].data = neg.slice(0);
+            data.datasets[2].data = net.slice(0);
+
+            var option = {
+                responsive: true,
+            };
+
+            // Get the context of the canvas element we want to select
+            var ctx = document.getElementById("myChart2").getContext('2d');
+            var myLineChart = new Chart(ctx).Line(data, option);
+
+        });
+    </script>
+
+{% endblock %}

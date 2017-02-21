@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment - Analyzer</title>
+
+    {% load staticfiles %}
+    <script src="{% static '/js/jquery-3.1.1.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" type="text/css"/>
+    <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/css/materialize.min.css' %}" type="text/css"/>
+    <script src="{% static '/js/materialize.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/css/material.min.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static '/css/mdb.min.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css"/>
+    <script src="{% static '/js/material.min.js' %}"></script>
+    <script src="{% static '/js/mdb.min.js' %}"></script>
+    <script src="{% static '/js/tether.min.js' %}"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--custom styles -->
+    {% load static %}
+    <link rel="stylesheet" href={% static '/sentiment/main.css' %} type="text/css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-fixed-top biengShadowless biengFocused biengFree beingBluGreen beinghidden">
+    <a class="navbar-brand biengShadowless biengWhite" href="/sentiment-analyzer">SENTIMENT ANALYZER</a>
+</nav>
+
+
+
+{% block content %}
+{% endblock %}
+
+
+
+<!-- /.container -->
+</body>
+</html>

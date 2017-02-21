@@ -1,0 +1,225 @@
+
+    .beinghidden {
+        visibility: hidden;
+    }
+
+    .biengLightWhite {
+        color: antiquewhite;
+    }
+
+    .biengCentreFocused {
+        margin-top: 100px;
+    }
+
+    .biengred {
+        background: #cb2d3e; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #cb2d3e, #ef473a); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #cb2d3e, #ef473a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .biengGreeny {
+        background: #1D976C; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #1D976C, #93F9B9); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #1D976C, #93F9B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .beingBluGreen {
+        background: #4CB8C4; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4CB8C4, #3CD3AD); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4CB8C4, #3CD3AD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .beingGrey {
+        background: #ECE9E6; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #ECE9E6, #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #ECE9E6, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .biengWhite {
+        color: white;
+    }
+
+    .biengTransparent {
+        background: transparent;
+        width: 100%;
+    }
+
+    .biengFree {
+        border: none;
+        border-radius: inherit;
+    }
+
+    .biengShadowless {
+        box-shadow: none;
+    }
+
+    .biengFocused {
+        text-align: center;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    .container-fluid {
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    .vertical-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .searchCool {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        border-bottom: 2px solid whitesmoke;
+        background: transparent;
+    }
+
+    .marginedTop {
+        margin-top: 50px;
+    }
+
+    #sButton {
+        background: transparent;
+        border: 0px;
+    }
+
+    ul.share-buttons {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul.share-buttons li {
+        display: inline;
+    }
+
+    ul.share-buttons .sr-only {
+        position: absolute;
+        clip: rect(1px 1px 1px 1px);
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+    }
+
+    .beingcompletewhite {
+        background: white;
+    }
+
+    .height50 {
+        height: 50px;
+    }
+
+    .height80 {
+        height: 80px;
+    }
+
+    .height50 {
+        height: 50px;
+    }
+
+    .height254 {
+        height: 254px;
+        margin-top: 10px;
+    }
+
+    .height300 {
+        height: 300px;
+    }
+
+    .padding15 {
+        padding: 15px;
+    }
+
+    .marginedTop100 {
+        margin-top: 100px;
+    }
+
+    .paddingTop100 {
+        padding-top: 50px;
+    }
+
+    a {
+        color: white;
+    }
+
+    .width33 {
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .nav-link {
+        height: 100%;
+        width: 100%;
+    }
+
+    .badge {
+        width: 20px;
+        height: 20px;
+    }
+
+    .badge:empty {
+        display: inline-flex;
+    }
+
+    .bgreen {
+        background: #06bf53;
+    }
+
+    .bred {
+        background: #F7464A;
+    }
+
+    .bblue {
+        background: #00b5fd;
+    }
+
+    .marginedTop70 {
+        margin-top: 70px;
+    }
+
+    .tabCard {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .infoCard {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .tcardnt {
+        color: #F7464A;
+    }
+
+    .tcardp {
+        color: #06bf53;
+    }
+
+    .tcardn {
+        color: #00b5fd;
+    }
+
+    .card-title {
+        color: #717171;
+        margin: auto;
+    }
+
+    #inforow {
+        margin-top: 50px;
+    }
+

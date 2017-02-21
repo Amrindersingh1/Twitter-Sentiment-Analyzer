@@ -1,0 +1,28 @@
+{% extends 'sentimentAnalyzer/header.html' %}
+
+{% block content %}
+    <div class="container-fluid beingBluGreen biengFocused">
+        <div class="row biengCentreFocused align-middle">
+            <div class="col-lg-12">
+                <div class="biengWhite center-block">
+                    <h1>SENTIMENT ANALYZER</h1>
+                    <h4>A Tool to analyze textual sentiments on twitter</h4>
+                </div>
+
+                <form autocomplete="off" class="form-inline biengWhite" method="GET"
+                      action="/sentiment-analyzer/analyze">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label marginedTop biengWhite">
+                        <input name="searchTag" class="mdl-textfield__input biengWhite beingFocused searchCool"
+                               type="text" id="searchLabel">
+                        <label class="mdl-textfield__label biengLightWhite biengFocused" for="searchLabel">#Hashtag
+                            search</label>
+                    </div>
+                    <button type="submit" class="biengWhite" id="sButton">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
